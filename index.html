@@ -121,9 +121,9 @@
         <h2>Laten we kennismaken.</h2>
         <p>Laat een bericht achter en we bellen u binnen een werkdag terug.</p>
         <ul class="contact-list">
-          <li><b>Telefoon</b> <a href="tel:+31000000000">+31 (0)00 000 0000</a></li>
-          <li><b>E-mail</b> <a href="mailto:info@mtworks.nl">info@mtworks.nl</a></li>
-          <li><b>Adres</b> Straatnaam 1, 1234 AB Plaats</li>
+          <li><b>Telefoon</b> <a href="tel:+31638961512">06 38 96 15 12</a></li>
+          <li><b>E-mail</b> <a href="mailto:info@mt-works.nl">info@mt-works.nl</a></li>
+          <li><b>Adres</b> Beeklaan 220, Noordwijk</li>
         </ul>
       </div>
       <form class="form" onsubmit="return verstuur(event)">
@@ -141,7 +141,7 @@
   <footer class="foot">
     <div class="wrap foot-inner">
       <span>© <span id="jaar"></span> MT Works. Uw partner in personeel.</span>
-      <span>KvK 00000000</span>
+      <span>KvK 42156685</span>
     </div>
   </footer>
 
@@ -152,7 +152,7 @@
       e.preventDefault();
       const f = e.target;
       const tekst = `Naam: ${f.naam.value}\nContact: ${f.contact.value}\nIk ben: ${f.type.value}\n\n${f.bericht.value}`;
-      location.href = 'mailto:info@mtworks.nl?subject=' + encodeURIComponent('Bericht via website') + '&body=' + encodeURIComponent(tekst);
+      location.href = 'mailto:info@mt-works.nl?subject=' + encodeURIComponent('Bericht via website') + '&body=' + encodeURIComponent(tekst);
       return false;
     }
   </script>
