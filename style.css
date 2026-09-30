@@ -114,3 +114,16 @@ p { color: var(--muted); }
   .cards, .steps { grid-template-columns: 1fr; }
   .hero { padding: 44px 0 56px; }
 }
+
+/* privacyverklaring */
+.foot a { color: #c9d8ec; }
+.foot a:hover { color: #fff; }
+.legal .wrap { max-width: 780px; }
+.legal h2 { font-size: 1.35rem; margin: 2.2rem 0 .7rem; }
+.legal p { margin-bottom: 1rem; }
+.legal .datum { font-weight: 600; color: var(--navy); }
+.legal ul { margin: 0 0 1rem 1.3rem; color: var(--muted); }
+.legal li { margin-bottom: .3rem; }
+.legal a { color: var(--blue); }
+.legal .adres { line-height: 1.8; }
+.legal .adres strong { color: var(--navy); }
