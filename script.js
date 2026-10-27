@@ -233,7 +233,7 @@
   var track = document.querySelector('.marquee-track');
   if (track && !reduce) {
     var groep = track.querySelector('.marquee-group');
-    while (track.scrollWidth < window.innerWidth * 2.2) track.appendChild(groep.cloneNode(true));
+    do { track.appendChild(groep.cloneNode(true)); } while (track.scrollWidth < groep.offsetWidth + window.innerWidth * 1.5);
     var x = 0, richting = 1, extra = 0, laatsteY = window.scrollY;
     (function loop() {
       var y = window.scrollY, v = y - laatsteY;
