@@ -2,34 +2,60 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacyverklaring | MT Works</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Privacyverklaring | MT Works B.V.</title>
   <meta name="description" content="Privacyverklaring van MT Works B.V.: welke persoonsgegevens wij verwerken, waarvoor en welke rechten u heeft.">
+  <meta name="theme-color" content="#0B2A55">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-  <header class="top">
-    <div class="wrap top-inner">
-      <a href="index.html" class="brand"><img src="img/logo.jpg" alt="MT Works, uw partner in personeel"></a>
-      <nav class="menu" id="menu">
-        <a href="index.html#werkgevers">Werkgevers</a>
-        <a href="index.html#werkzoekenden">Werkzoekenden</a>
-        <a href="index.html#werkwijze">Werkwijze</a>
-        <a href="index.html#contact" class="btn btn-small">Contact</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="fig" viewBox="560 105 445 505"><circle cx="785" cy="190" r="78" fill="currentColor"/><path d="M577 230H655L780 320L905 236H988L820 386V603H757V410Z" fill="currentColor"/></symbol>
+  </svg>
+
+  <header class="hdr" id="hdr">
+    <div class="wrap hdr-in">
+      <a href="/" class="brand" aria-label="MT Works B.V., naar de homepage">
+        <img class="kleur" src="img/logo.png" alt="MT Works, uw partner in personeel" width="640" height="397">
+        <img class="wit" src="img/logo-wit.png" alt="" width="640" height="397">
+      </a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <a href="/#diensten">Diensten</a>
+        <a href="/#werkwijze">Werkwijze</a>
+        <a href="werken-bij.html">Werken bij MT Works</a>
       </nav>
-      <button class="burger" aria-label="Menu openen" onclick="document.getElementById('menu').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="/#aanvragen" class="btn p hdr-cta">Personeel aanvragen</a>
+      <button type="button" class="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu openen"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <section class="block legal">
-    <div class="wrap">
-      <p class="eyebrow">Privacy</p>
+  <div class="menu-backdrop"></div>
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Menu">
+    <nav class="menu-links" aria-label="Hoofdmenu mobiel">
+      <a class="mi" href="/#diensten"><span>01</span><span>Diensten</span></a>
+      <a class="mi" href="/#werkwijze"><span>02</span><span>Werkwijze</span></a>
+      <a class="mi" href="werken-bij.html"><span>03</span><span>Werken bij MT Works</span></a>
+    </nav>
+    <div class="menu-foot mi">
+      <a href="/#aanvragen" class="btn p">Personeel aanvragen</a>
+      <a href="https://werken-mtworks.nl/solliciteren" class="btn ol">Direct solliciteren</a>
+      <div class="menu-contact">
+        <a href="tel:+31638961512">06 38 96 15 12</a>
+        <a href="mailto:info@mt-works.nl">info@mt-works.nl</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+    <div class="wrap legal">
+      <span class="eyebrow">Privacy</span>
       <h1>Privacyverklaring</h1>
       <p class="datum">Ingangsdatum: 1 oktober 2026</p>
 
@@ -82,17 +108,23 @@
       </p>
       <p>MT Works kan deze privacyverklaring wijzigen wanneer onze dienstverlening of wet- en regelgeving verandert. De meest actuele versie is beschikbaar op onze website.</p>
     </div>
-  </section>
+  </main>
 
   <footer class="foot">
-    <div class="wrap foot-inner">
-      <span>© <span id="jaar"></span> MT Works. Uw partner in personeel.</span>
-      <span>KvK 42156685 · <a href="privacy.html">Privacyverklaring</a></span>
+    <div class="wrap foot-in">
+      <div class="foot-brand">
+        <img src="img/logo.png" alt="MT Works" width="640" height="397" loading="lazy">
+        <p>© <span class="jaar">2026</span> MT Works B.V. · KvK 42156685 · <a href="privacy.html">Privacyverklaring</a></p>
+      </div>
+      <nav class="foot-nav" aria-label="Footermenu">
+        <a href="/#diensten">Diensten</a>
+        <a href="/#werkwijze">Werkwijze</a>
+        <a href="werken-bij.html">Werken bij MT Works</a>
+        <a href="/#aanvragen">Personeel aanvragen</a>
+      </nav>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('jaar').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

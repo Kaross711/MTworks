@@ -2,159 +2,271 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MT Works | Uw partner in personeel</title>
-  <meta name="description" content="MT Works is een uitzendbureau dat werkgevers en werkzoekenden snel en persoonlijk aan elkaar koppelt.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MT Works B.V. | Uw partner in personeel</title>
+  <meta name="description" content="Uitzendbureau voor horeca en logistiek. Bediening, afwas, schoonmaak en magazijnpersoneel, snel geregeld.">
+  <meta name="theme-color" content="#0B2A55">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MT Works B.V. | Uw partner in personeel">
+  <meta property="og:description" content="Goed personeel. Snel geregeld. Personeel voor horeca en logistiek.">
+  <meta property="og:image" content="/img/og.png">
+  <meta property="og:locale" content="nl_NL">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      if (!sessionStorage.getItem('mtw-intro') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('intro');
+        sessionStorage.setItem('mtw-intro', '1');
+      }
+    } catch (e) {}
+  </script>
 </head>
 <body>
 
-  <header class="top">
-    <div class="wrap top-inner">
-      <a href="#" class="brand"><img src="img/logo.jpg" alt="MT Works, uw partner in personeel"></a>
-      <nav class="menu" id="menu">
-        <a href="#werkgevers">Werkgevers</a>
-        <a href="#werkzoekenden">Werkzoekenden</a>
-        <a href="#werkwijze">Werkwijze</a>
-        <a href="#contact" class="btn btn-small">Contact</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="fig" viewBox="560 105 445 505"><circle cx="785" cy="190" r="78" fill="currentColor"/><path d="M577 230H655L780 320L905 236H988L820 386V603H757V410Z" fill="currentColor"/></symbol>
+  </svg>
+
+  <div class="splash" aria-hidden="true"><img src="img/logo.png" alt="" width="640" height="397"></div>
+
+  <header class="hdr" id="hdr">
+    <div class="wrap hdr-in">
+      <a href="#top" class="brand" aria-label="MT Works B.V., naar boven">
+        <img class="kleur" src="img/logo.png" alt="MT Works, uw partner in personeel" width="640" height="397">
+        <img class="wit" src="img/logo-wit.png" alt="" width="640" height="397">
+      </a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <a href="#diensten" data-spy="diensten">Diensten</a>
+        <a href="#werkwijze" data-spy="werkwijze">Werkwijze</a>
+        <a href="werken-bij.html">Werken bij MT Works</a>
       </nav>
-      <button class="burger" aria-label="Menu openen" onclick="document.getElementById('menu').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="#aanvragen" class="btn p hdr-cta">Personeel aanvragen</a>
+      <button type="button" class="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu openen"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="wrap hero-inner">
-      <div class="hero-text">
-        <p class="eyebrow">Uitzendbureau</p>
-        <h1>De juiste mensen,<br>op het juiste moment.</h1>
-        <p class="lead">MT Works levert betrouwbaar personeel voor productie, logistiek, bouw en techniek. Wij regelen de werving, de planning en de administratie. U houdt tijd over voor uw bedrijf.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn">Personeel aanvragen</a>
-          <a href="#werkzoekenden" class="btn btn-ghost">Ik zoek werk</a>
+  <div class="menu-backdrop"></div>
+  <div id="menu" class="menu" role="dialog" aria-modal="true" aria-label="Menu">
+    <nav class="menu-links" aria-label="Hoofdmenu mobiel">
+      <a class="mi" href="#diensten"><span>01</span><span>Diensten</span></a>
+      <a class="mi" href="#werkwijze"><span>02</span><span>Werkwijze</span></a>
+      <a class="mi" href="werken-bij.html"><span>03</span><span>Werken bij MT Works</span></a>
+    </nav>
+    <div class="menu-foot mi">
+      <a href="#aanvragen" class="btn p">Personeel aanvragen</a>
+      <a href="https://werken-mtworks.nl/solliciteren" class="btn ol">Direct solliciteren</a>
+      <div class="menu-contact">
+        <a href="tel:+31638961512">06 38 96 15 12</a>
+        <a href="mailto:info@mt-works.nl">info@mt-works.nl</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="blob" aria-hidden="true" style="width:520px;height:520px;left:-160px;top:-120px;background:#8CC3FF"></div>
+      <div class="blob" aria-hidden="true" style="width:420px;height:420px;left:38%;bottom:-220px;background:#2B8BE6;opacity:.14;animation-duration:28s"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <div class="hero-id rv" style="--d:0ms">
+            <span class="eyebrow">MT Works B.V.</span>
+            <span class="sub">Uw partner in personeel</span>
+          </div>
+          <h1 id="hero-title">
+            <span class="l"><span class="w rv" style="--d:100ms">Goed</span> <span class="w rv" style="--d:160ms">personeel.</span></span>
+            <span class="l l2"><span class="w rv" style="--d:220ms">Snel</span> <span class="w rv" style="--d:280ms">geregeld.</span></span>
+          </h1>
+          <p class="lead rv" style="--d:420ms">Wij bieden flexibele en betrouwbare personeelsoplossingen voor logistiek, horeca, bediening, afwas en schoonmaak. Wij schakelen snel, denken mee en zorgen voor passende medewerkers.</p>
+          <div class="hero-cta rv" style="--d:550ms">
+            <a href="#aanvragen" class="btn p pulse">Personeel aanvragen <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="https://werken-mtworks.nl/solliciteren" class="btn o">Direct solliciteren</a>
+          </div>
+        </div>
+
+        <div class="hero-card-wrap rv" style="--d:250ms">
+          <div class="hero-card">
+            <div class="grid-bg" aria-hidden="true"></div>
+            <div class="blob" aria-hidden="true" style="width:380px;height:380px;right:-80px;top:-60px;background:#2B8BE6;opacity:.45"></div>
+            <svg class="fig" aria-hidden="true" style="color:#8CC3FF"><use href="#fig"/></svg>
+            <p class="label">Personeel voor</p>
+            <div class="hero-tiles">
+              <div class="tile float">
+                <span class="tile-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B2A55" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h18"/><path d="M5 17a7 7 0 0 1 14 0"/><path d="M12 8V6"/><path d="M10 6h4"/></svg></span>
+                <span class="tile-txt"><b>Horeca</b><span>Bediening · Afwas · Schoonmaak</span></span>
+              </div>
+              <div class="tile float">
+                <span class="tile-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B2A55" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg></span>
+                <span class="tile-txt"><b>Logistiek</b><span>Orderpicken · Magazijn · Inpakken</span></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="hero-img">
-        <img src="img/bus.jpg" alt="Bedrijfsbus van MT Works">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="stats">
-    <div class="wrap stats-inner">
-      <div><strong>24 uur</strong><span>Reactie op uw aanvraag</span></div>
-      <div><strong>Vast contact</strong><span>Eén aanspreekpunt</span></div>
-      <div><strong>Flexibel</strong><span>Per dag, week of project</span></div>
-    </div>
-  </section>
-
-  <section id="werkgevers" class="block">
-    <div class="wrap two">
-      <div>
-        <p class="eyebrow">Voor werkgevers</p>
-        <h2>Extra handen nodig? Wij regelen het.</h2>
-        <p>Een drukke periode, een zieke collega of een nieuw project. Wij zoeken mensen die passen bij uw werk en uw team. U betaalt alleen voor de uren die gewerkt zijn.</p>
-        <ul class="checks">
-          <li>Uitzenden en detacheren</li>
-          <li>Werving en selectie voor vaste functies</li>
-          <li>Loonadministratie en contracten volledig verzorgd</li>
-          <li>Snel schakelen bij piekdrukte</li>
-        </ul>
-        <a href="#contact" class="btn">Neem contact op</a>
-      </div>
-      <div class="photo"><img src="img/raam.jpg" alt="Kantoor van MT Works"></div>
-    </div>
-  </section>
-
-  <section id="werkzoekenden" class="block alt">
-    <div class="wrap two reverse">
-      <div class="photo"><img src="img/jas.jpg" alt="Werkjas met MT Works logo"></div>
-      <div>
-        <p class="eyebrow">Voor werkzoekenden</p>
-        <h2>Aan de slag bij goede bedrijven.</h2>
-        <p>Of je nu een tijdelijke baan zoekt of een vaste plek, wij helpen je verder. Je krijgt een eigen contactpersoon die je kent en die je eerlijk vertelt wat je kunt verwachten.</p>
-        <ul class="checks">
-          <li>Wekelijks uitbetaald</li>
-          <li>Werk in de buurt</li>
-          <li>Kans op een vast contract</li>
-          <li>Hulp bij huisvesting en vervoer waar nodig</li>
-        </ul>
-        <a href="#contact" class="btn">Schrijf je in</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="wrap">
-      <p class="eyebrow center">Sectoren</p>
-      <h2 class="center">Waar onze mensen werken</h2>
-      <div class="cards">
-        <div class="card"><div class="ico">🏭</div><h3>Productie</h3><p>Operators, inpakkers en machinebedieners.</p></div>
-        <div class="card"><div class="ico">📦</div><h3>Logistiek</h3><p>Orderpickers, heftruckchauffeurs en magazijnmedewerkers.</p></div>
-        <div class="card"><div class="ico">🏗️</div><h3>Bouw</h3><p>Timmerlieden, grondwerkers en bouwplaatsmedewerkers.</p></div>
-        <div class="card"><div class="ico">🔧</div><h3>Techniek</h3><p>Monteurs, elektriciens en installateurs.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="werkwijze" class="block alt">
-    <div class="wrap">
-      <p class="eyebrow center">Werkwijze</p>
-      <h2 class="center">Zo werken wij</h2>
-      <div class="steps">
-        <div class="step"><span>1</span><h3>Kennismaken</h3><p>We bespreken wat u nodig heeft: functie, uren, startdatum.</p></div>
-        <div class="step"><span>2</span><h3>Selectie</h3><p>We zoeken kandidaten en spreken ze zelf eerst.</p></div>
-        <div class="step"><span>3</span><h3>Aan de slag</h3><p>De medewerker start. Wij regelen contract en loon.</p></div>
-        <div class="step"><span>4</span><h3>Nazorg</h3><p>We blijven in contact en sturen bij waar nodig.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="block contact">
-    <div class="wrap two">
-      <div>
-        <p class="eyebrow light">Contact</p>
-        <h2>Laten we kennismaken.</h2>
-        <p>Laat een bericht achter en we bellen u binnen een werkdag terug.</p>
-        <ul class="contact-list">
-          <li><b>Telefoon</b> <a href="tel:+31638961512">06 38 96 15 12</a></li>
-          <li><b>E-mail</b> <a href="mailto:info@mt-works.nl">info@mt-works.nl</a></li>
-          <li><b>Adres</b> Beeklaan 220, 2201 BM Noordwijk</li>
+    <section class="facts" aria-label="Kernpunten">
+      <div class="wrap">
+        <ul class="facts-list">
+          <li class="fact sr"><b><span class="count" data-to="24" aria-hidden="true">24</span><span class="sr-only">24</span> uur</b><span>Reactie op uw aanvraag</span></li>
+          <li class="fact sr" style="--d:80ms"><b>Eén aanspreekpunt</b><span>Vast contact</span></li>
+          <li class="fact sr" style="--d:160ms"><b>Flexibel</b><span>Per dag, week of project</span></li>
         </ul>
       </div>
-      <form class="form" onsubmit="return verstuur(event)">
-        <label>Naam<input name="naam" required></label>
-        <label>E-mail of telefoon<input name="contact" required></label>
-        <label>Ik ben
-          <select name="type"><option>Werkgever</option><option>Werkzoekende</option></select>
-        </label>
-        <label>Bericht<textarea name="bericht" rows="4" required></textarea></label>
-        <button class="btn" type="submit">Verstuur</button>
-      </form>
-    </div>
-  </section>
+    </section>
+
+    <section id="diensten" class="section" aria-labelledby="diensten-title">
+      <div class="wrap">
+        <div class="diensten-head sr">
+          <div class="sec-head">
+            <span class="eyebrow">Diensten</span>
+            <h2 id="diensten-title" class="sec-title">Horeca en logistiek.</h2>
+          </div>
+          <p>Twee sectoren, één aanspreekpunt. Wij leveren de mensen die u nodig heeft.</p>
+        </div>
+        <div class="panels">
+          <article class="panel sr on" data-panel>
+            <svg class="panel-deco" aria-hidden="true" style="color:#8CC3FF"><use href="#fig"/></svg>
+            <div class="panel-top">
+              <svg class="ico" width="64" height="64" viewBox="0 0 48 48" fill="none" stroke="#8CC3FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M6 34h36"/><path pathLength="1" d="M10 34a14 14 0 0 1 28 0"/><path pathLength="1" d="M24 20v-4"/><path pathLength="1" d="M20 16h8"/><path pathLength="1" d="M8 40h32"/></svg>
+              <div>
+                <h3>Horeca</h3>
+                <p>Personeel voor restaurants, hotels, events en catering.</p>
+              </div>
+              <ul class="tags" aria-label="Functies horeca">
+                <li class="tag">Bediening</li>
+                <li class="tag">Afwas</li>
+                <li class="tag">Schoonmaak</li>
+              </ul>
+            </div>
+            <a href="#aanvragen" class="btn w" data-sector="Horeca">Personeel aanvragen</a>
+          </article>
+          <article class="panel sr" style="--d:100ms" data-panel>
+            <svg class="panel-deco" aria-hidden="true" style="color:#8CC3FF"><use href="#fig"/></svg>
+            <div class="panel-top">
+              <svg class="ico" width="64" height="64" viewBox="0 0 48 48" fill="none" stroke="#8CC3FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M8 16l16-8 16 8v16l-16 8-16-8z"/><path pathLength="1" d="M8 16l16 8 16-8"/><path pathLength="1" d="M24 24v16"/><path pathLength="1" d="M16 12l16 8"/></svg>
+              <div>
+                <h3>Logistiek</h3>
+                <p>Personeel voor magazijn en distributie.</p>
+              </div>
+              <ul class="tags" aria-label="Functies logistiek">
+                <li class="tag">Orderpicken</li>
+                <li class="tag">Magazijn</li>
+                <li class="tag">Inpakken</li>
+              </ul>
+            </div>
+            <a href="#aanvragen" class="btn w" data-sector="Logistiek">Personeel aanvragen</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="werkwijze" class="section alt" aria-labelledby="werkwijze-title">
+      <div class="wrap">
+        <div class="sec-head sr">
+          <span class="eyebrow">Werkwijze</span>
+          <h2 id="werkwijze-title" class="sec-title">In vier stappen geregeld.</h2>
+        </div>
+        <div class="steps-wrap" id="steps">
+          <div class="steps-line" aria-hidden="true"><i></i></div>
+          <ol class="steps">
+            <li class="step sr"><span class="dot" style="--dd:0ms">1</span><h3>Aanvraag</h3><p>U vertelt wat u nodig heeft.</p></li>
+            <li class="step sr" style="--d:100ms"><span class="dot" style="--dd:350ms">2</span><h3>Selectie</h3><p>Wij zoeken en spreken de kandidaten zelf.</p></li>
+            <li class="step sr" style="--d:200ms"><span class="dot" style="--dd:700ms">3</span><h3>Aan de slag</h3><p>De medewerker start, wij regelen contract en loon.</p></li>
+            <li class="step sr" style="--d:300ms"><span class="dot" style="--dd:1050ms">4</span><h3>Nazorg</h3><p>Wij blijven in contact en sturen bij.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="werk" aria-labelledby="werk-title">
+      <div class="wrap">
+        <div class="werk-box sr">
+          <svg class="werk-deco" aria-hidden="true" style="color:#8CC3FF"><use href="#fig"/></svg>
+          <div class="werk-txt">
+            <h2 id="werk-title">Op zoek naar werk?</h2>
+            <p>Wij hebben werk in horeca en logistiek, met een vast aanspreekpunt.</p>
+          </div>
+          <div class="werk-cta">
+            <a href="https://werken-mtworks.nl/solliciteren" class="btn w">Direct solliciteren</a>
+            <a href="werken-bij.html" class="btn ol">Meer over werken bij MT Works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aanvragen" class="section" aria-labelledby="aanvragen-title">
+      <div class="wrap aanvraag-grid">
+        <div class="aanvraag-main sr">
+          <div class="sec-head">
+            <span class="eyebrow">Voor opdrachtgevers</span>
+            <h2 id="aanvragen-title" class="sec-title">Personeel aanvragen</h2>
+            <p>Vul het formulier in. Wij reageren binnen 24 uur.</p>
+          </div>
+
+          <form class="form" id="aanvraag" action="https://formsubmit.co/info@mt-works.nl" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Personeelsaanvraag via website">
+            <input type="hidden" name="_template" value="table">
+            <div class="fld"><label for="f-bedrijf">Bedrijfsnaam *</label><input id="f-bedrijf" name="Bedrijfsnaam" type="text" autocomplete="organization" required></div>
+            <div class="fld"><label for="f-contact">Contactpersoon *</label><input id="f-contact" name="Contactpersoon" type="text" autocomplete="name" required></div>
+            <div class="fld"><label for="f-tel">Telefoon *</label><input id="f-tel" name="Telefoon" type="tel" inputmode="tel" autocomplete="tel" required></div>
+            <div class="fld"><label for="f-mail">E-mail *</label><input id="f-mail" name="E-mail" type="email" inputmode="email" autocomplete="email" required></div>
+            <div class="fld"><label for="f-sector">Sector</label><select id="f-sector" name="Sector"><option>Horeca</option><option>Logistiek</option><option>Anders</option></select></div>
+            <div class="fld"><label for="f-aantal">Aantal medewerkers</label><input id="f-aantal" name="Aantal medewerkers" type="number" inputmode="numeric" min="1"></div>
+            <div class="fld"><label for="f-start">Gewenste startdatum</label><input id="f-start" name="Gewenste startdatum" type="date"></div>
+            <div class="fld full"><label for="f-toel">Toelichting</label><textarea id="f-toel" name="Toelichting" rows="4"></textarea></div>
+            <div class="hp" aria-hidden="true"><label for="f-honey">Laat dit veld leeg</label><input id="f-honey" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
+            <p class="form-err" role="alert" hidden></p>
+            <div class="form-foot">
+              <p>Velden met * zijn verplicht.</p>
+              <button type="submit" class="btn p">Aanvraag versturen</button>
+            </div>
+          </form>
+
+          <div class="sent" role="status" hidden>
+            <span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8CC3FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+            <p>Bedankt, wij nemen binnen 24 uur contact met u op.</p>
+            <button type="button" class="linkbtn" id="opnieuw">Nieuwe aanvraag</button>
+          </div>
+        </div>
+
+        <aside class="contact-card sr" style="--d:120ms" aria-label="Contactgegevens">
+          <h3>Liever direct contact?</h3>
+          <a class="ci" href="tel:+31638961512"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8CC3FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><b>06 38 96 15 12</b></a>
+          <a class="ci" href="mailto:info@mt-works.nl"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8CC3FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><b>info@mt-works.nl</b></a>
+          <div class="ci adr"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8CC3FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><address>Beeklaan 220<br>2201 BM Noordwijk</address></div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="foot">
-    <div class="wrap foot-inner">
-      <span>© <span id="jaar"></span> MT Works. Uw partner in personeel.</span>
-      <span>KvK 42156685 · <a href="privacy.html">Privacyverklaring</a></span>
+    <div class="wrap foot-in">
+      <div class="foot-brand">
+        <img src="img/logo.png" alt="MT Works" width="640" height="397" loading="lazy">
+        <p>© <span class="jaar">2026</span> MT Works B.V. · KvK 42156685 · <a href="privacy.html">Privacyverklaring</a></p>
+      </div>
+      <nav class="foot-nav" aria-label="Footermenu">
+        <a href="#diensten">Diensten</a>
+        <a href="#werkwijze">Werkwijze</a>
+        <a href="werken-bij.html">Werken bij MT Works</a>
+        <a href="#aanvragen">Personeel aanvragen</a>
+      </nav>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('jaar').textContent = new Date().getFullYear();
-    document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').classList.remove('open')));
-    function verstuur(e) {
-      e.preventDefault();
-      const f = e.target;
-      const tekst = `Naam: ${f.naam.value}\nContact: ${f.contact.value}\nIk ben: ${f.type.value}\n\n${f.bericht.value}`;
-      location.href = 'mailto:info@mt-works.nl?subject=' + encodeURIComponent('Bericht via website') + '&body=' + encodeURIComponent(tekst);
-      return false;
-    }
-  </script>
+  <div class="bar" id="bar">
+    <a href="#aanvragen" class="btn p">Personeel aanvragen</a>
+    <a href="https://werken-mtworks.nl/solliciteren" class="btn o">Solliciteren</a>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
